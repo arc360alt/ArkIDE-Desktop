@@ -1,4 +1,4 @@
-How to install arkide-desktop:
+# How to install arkide-desktop:
 
 - Clone the repository
 ```bash
@@ -34,3 +34,8 @@ pip install PyQt5 PyQtWebEngine
 ```bash
 python desktop.py
 ```
+
+# Limitations:
+- For some reason the Extra Extentions are just gone, so your going to have to import them yourself instead of clicking on them inside of the extention gallery
+- Save button on linux is quite buggy, you need to manualy save it evrey time. Dont know why.
+- Pro tip: When avalible, USE THE WEB VERSION, this app sucks tbh its so broken, I'll fix it at some point.
