@@ -1,8 +1,8 @@
 [Flatpak Repo]
 Title=Ark.IDE Repository
-Url=https://The-ArkIDE-Project.github.io/ArkIDE-Desktop/repo
+Url=https://the-arkide-project.github.io/arkide-desktop/repo
 Homepage=https://github.com/The-ArkIDE-Project/ArkIDE-Desktop
 Comment=Official Ark.IDE Flatpak repository
 Description=Install Ark.IDE directly from our repository
-Icon=https://The-ArkIDE-Project.github.io/ArkIDE-Desktop/icon.png
+Icon=https://the-arkide-project.github.io/arkide-desktop/icon.png
 GPGVerify=false

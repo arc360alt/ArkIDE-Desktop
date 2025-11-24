@@ -39,22 +39,30 @@
             margin: 10px 5px;
         }
         .button:hover { background: #45a049; }
+        .warning {
+            background: #ff9800;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <h1>🚀 Ark.IDE Flatpak Repository</h1>
     <p>Install Ark.IDE directly from our official Flatpak repository.</p>
     
-    <h2>Quick Install</h2>
+    <div class="warning">
+        <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
+    </div>
+    
+    <h2>Quick Install (Recommended)</h2>
     <p>Add the repository and install in one command:</p>
-    <pre><code>flatpak install --user https://The-ArkIDE-Project.github.io/ArkIDE-Desktop/arkide.flatpakrepo</code></pre>
+    <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://the-arkide-project.github.io/arkide-desktop/repo
+flatpak install --user arkide com.arkide.desktop</code></pre>
     
-    <h2>Manual Installation</h2>
-    <p><strong>Step 1:</strong> Add the repository</p>
-    <pre><code>flatpak remote-add --user --if-not-exists arkide https://The-ArkIDE-Project.github.io/ArkIDE-Desktop/repo</code></pre>
-    
-    <p><strong>Step 2:</strong> Install Ark.IDE</p>
-    <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
+    <h2>Alternative: Use .flatpakrepo file</h2>
+    <pre><code>flatpak install --user https://the-arkide-project.github.io/arkide-desktop/arkide.flatpakrepo</code></pre>
     
     <h2>Run Ark.IDE</h2>
     <pre><code>flatpak run com.arkide.desktop</code></pre>
@@ -64,11 +72,19 @@
     <pre><code>flatpak update com.arkide.desktop</code></pre>
     
     <h2>Uninstall</h2>
-    <pre><code>flatpak uninstall com.arkide.desktop</code></pre>
+    <pre><code>flatpak uninstall com.arkide.desktop
+flatpak remote-delete arkide</code></pre>
     
     <div style="margin-top: 40px;">
         <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
         <a href="https://github.com/The-ArkIDE-Project/ArkIDE-Desktop" class="button">View on GitHub</a>
     </div>
+    
+    <h2>Manual Installation Steps</h2>
+    <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
+    <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://the-arkide-project.github.io/arkide-desktop/repo</code></pre>
+    
+    <p><strong>Step 2:</strong> Install Ark.IDE</p>
+    <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
 </body>
 </html>
