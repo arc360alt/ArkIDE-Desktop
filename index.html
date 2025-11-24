@@ -46,11 +46,22 @@
             border-radius: 5px;
             margin: 20px 0;
         }
+        .info {
+            background: #2196F3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <h1>🚀 Ark.IDE Flatpak Repository</h1>
     <p>Install Ark.IDE directly from our official Flatpak repository.</p>
+    
+    <div class="info">
+        <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
+    </div>
     
     <div class="warning">
         <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
@@ -60,6 +71,8 @@
     <p>Add the repository and install in one command:</p>
     <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://the-arkide-project.github.io/ArkIDE-Desktop/repo
 flatpak install --user arkide com.arkide.desktop</code></pre>
+    
+    <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
     
     <h2>Alternative: Use .flatpakrepo file</h2>
     <pre><code>flatpak install --user https://the-arkide-project.github.io/ArkIDE-Desktop/arkide.flatpakrepo</code></pre>
@@ -79,6 +92,12 @@ flatpak remote-delete arkide</code></pre>
         <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
         <a href="https://github.com/The-ArkIDE-Project/ArkIDE-Desktop" class="button">View on GitHub</a>
     </div>
+    
+    <h2>Supported Architectures</h2>
+    <ul>
+        <li><strong>x86_64</strong> - Standard Intel/AMD processors</li>
+        <li><strong>ARM64 (aarch64)</strong> - ARM-based systems (Raspberry Pi 4/5, Apple Silicon via Asahi Linux, etc.)</li>
+    </ul>
     
     <h2>Manual Installation Steps</h2>
     <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
