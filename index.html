@@ -39,15 +39,15 @@
             margin: 10px 5px;
         }
         .button:hover { background: #45a049; }
-        .info {
-            background: #2196F3;
-            color: white;
+        .warning {
+            background: #ff9800;
+            color: #000;
             padding: 10px;
             border-radius: 5px;
             margin: 20px 0;
         }
-        .success {
-            background: #4CAF50;
+        .info {
+            background: #2196F3;
             color: white;
             padding: 10px;
             border-radius: 5px;
@@ -59,20 +59,18 @@
     <h1>🚀 ArkIDE Flatpak Repository</h1>
     <p>Install ArkIDE directly from our official Flatpak repository.</p>
     
-    <div class="success">
-        <strong>🔒 Secure:</strong> This repository is GPG-signed for your security!
-    </div>
-    
     <div class="info">
         <strong>✨ Multi-Architecture Support:</strong> Available for x86_64 and ARM64 (aarch64) systems!
     </div>
     
-    <h2>Quick Install (Recommended)</h2>
-    <p><strong>Step 1:</strong> Import the GPG key and add repository (one-time setup)</p>
-    <pre><code>wget -O - https://the-arkide-project.github.io/ArkIDE-Desktop/arkide-gpg-key.asc | flatpak remote-add --user --gpg-import=- arkide https://the-arkide-project.github.io/ArkIDE-Desktop/repo</code></pre>
+    <div class="warning">
+        <strong>⚠️ Important:</strong> This repository is not GPG-signed. Only install if you trust this source.
+    </div>
     
-    <p><strong>Step 2:</strong> Install ArkIDE</p>
-    <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
+    <h2>Quick Install (Recommended)</h2>
+    <p>Add the repository and install in one command:</p>
+    <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://the-arkide-project.github.io/ArkIDE-Desktop/repo
+flatpak install --user arkide com.arkide.desktop</code></pre>
     
     <p><em>Flatpak will automatically install the correct version for your architecture (x86_64 or ARM64).</em></p>
     
@@ -92,7 +90,6 @@ flatpak remote-delete arkide</code></pre>
     
     <div style="margin-top: 40px;">
         <a href="arkide.flatpakrepo" class="button">Download .flatpakrepo file</a>
-        <a href="arkide-gpg-key.asc" class="button">Download GPG Key</a>
         <a href="https://github.com/The-ArkIDE-Project/ArkIDE-Desktop" class="button">View on GitHub</a>
     </div>
     
@@ -102,21 +99,11 @@ flatpak remote-delete arkide</code></pre>
         <li><strong>ARM64 (aarch64)</strong> - ARM-based systems (Raspberry Pi 4/5, Apple Silicon via Asahi Linux, etc.)</li>
     </ul>
     
-    <h2>Verify GPG Signature</h2>
-    <p>You can verify the repository is authentic:</p>
-    <pre><code>wget https://the-arkide-project.github.io/ArkIDE-Desktop/arkide-gpg-key.asc
-gpg --import arkide-gpg-key.asc
-flatpak remote-ls arkide --show-details</code></pre>
-    
     <h2>Manual Installation Steps</h2>
-    <p><strong>Step 1:</strong> Download and import the GPG key</p>
-    <pre><code>wget https://the-arkide-project.github.io/ArkIDE-Desktop/arkide-gpg-key.asc
-gpg --import arkide-gpg-key.asc</code></pre>
+    <p><strong>Step 1:</strong> Add the repository (without GPG verification)</p>
+    <pre><code>flatpak remote-add --user --if-not-exists --no-gpg-verify arkide https://the-arkide-project.github.io/ArkIDE-Desktop/repo</code></pre>
     
-    <p><strong>Step 2:</strong> Add the repository</p>
-    <pre><code>flatpak remote-add --user --gpg-import=arkide-gpg-key.asc arkide https://the-arkide-project.github.io/ArkIDE-Desktop/repo</code></pre>
-    
-    <p><strong>Step 3:</strong> Install ArkIDE</p>
+    <p><strong>Step 2:</strong> Install ArkIDE</p>
     <pre><code>flatpak install --user arkide com.arkide.desktop</code></pre>
 </body>
 </html>

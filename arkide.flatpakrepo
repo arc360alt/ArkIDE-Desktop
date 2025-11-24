@@ -2,7 +2,7 @@
 Title=ArkIDE Repository
 Url=https://the-arkide-project.github.io/ArkIDE-Desktop/repo
 Homepage=https://github.com/The-ArkIDE-Project/ArkIDE-Desktop
-Comment=Official ArkIDE Flatpak repository (GPG signed, x86_64 and ARM64)
+Comment=Official ArkIDE Flatpak repository (x86_64 and ARM64)
 Description=Install ArkIDE directly from our repository
 Icon=https://the-arkide-project.github.io/ArkIDE-Desktop/icon.png
-GPGKey=https://the-arkide-project.github.io/ArkIDE-Desktop/arkide-gpg-key.asc
+GPGVerify=false
